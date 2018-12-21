@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+<% include partials/menu %>
+<div class="container-fluid bg-3 text-center">    
+  <h3><%= page %></h3><br>
+  <% if(page === 'Beginner') {%>
+    <% include partials/beginner %>
+  <% } else if(page === 'Intermediate') {%>
+    <% include partials/intermediate %>
+  <% } else if(page === 'Advanced') {%>
+    <% include partials/advanced %>
+  <% } else {%>
+    <% include error %>
+  <% } %>
+</div>
+</body>
+<% include partials/script %>
+</html>
